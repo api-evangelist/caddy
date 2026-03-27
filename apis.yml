@@ -1,0 +1,38 @@
+aid: caddy
+name: Caddy
+description: >-
+  Caddy is a modern, extensible web server and reverse proxy with automatic HTTPS, built in Go.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Proxy
+  - Reverse Proxy
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/caddy/refs/heads/main/apis.yml
+created: '2026-03-27'
+modified: '2026-03-27'
+specificationVersion: '0.19'
+apis:
+  - aid: caddy:caddy
+    name: Caddy
+    description: >-
+      Caddy is a modern, extensible, web server and reverse proxy with automatic HTTPS, built in Go.
+    humanURL: https://caddyserver.com/
+    tags:
+      - Proxy
+      - Reverse Proxy
+    properties:
+      - type: Documentation
+        url: https://caddyserver.com/docs/
+      - type: Getting Started
+        url: https://caddyserver.com/docs/getting-started
+common:
+  - type: Website
+    url: https://caddyserver.com/
+  - type: Documentation
+    url: https://caddyserver.com/docs/
+  - type: GitHub Organization
+    url: https://github.com/caddyserver
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
