@@ -48,6 +48,8 @@ apis:
         url: https://github.com/caddyserver/caddy
       - type: Download
         url: https://caddyserver.com/download
+      - type: OpenAPI
+        url: openapi/caddy-openapi.yml
     x-features:
       - Automatic HTTPS via Let's Encrypt and ZeroSSL
       - HTTP/1.1, HTTP/2, HTTP/3 (QUIC) support
