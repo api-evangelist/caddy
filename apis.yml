@@ -7,7 +7,7 @@ description: >-
   modular architecture with a rich ecosystem of plugins for authentication,
   observability, and custom behavior.
 type: Index
-x-type: opensource
+kind: opensource
 position: Consumer
 access: Open Source
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
@@ -42,9 +42,9 @@ apis:
     properties:
       - type: Documentation
         url: https://caddyserver.com/docs/
-      - type: Getting Started
+      - type: GettingStarted
         url: https://caddyserver.com/docs/getting-started
-      - type: GitHub Repository
+      - type: GitHubRepository
         url: https://github.com/caddyserver/caddy
       - type: Download
         url: https://caddyserver.com/download
@@ -108,7 +108,7 @@ common:
     url: https://caddyserver.com/
   - type: Documentation
     url: https://caddyserver.com/docs/
-  - type: GitHub Organization
+  - type: GitHubOrganization
     url: https://github.com/caddyserver
   - type: Community Forum
     url: https://caddy.community/
