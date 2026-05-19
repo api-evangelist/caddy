@@ -1,0 +1,109 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Caddy Admin API — Lifecycle
+  description: 'Caddy Admin API — Lifecycle. 2 operations. Lead operation: Set or replace the active configuration. Self-contained
+    Naftiko capability covering one Caddy business surface.'
+  tags:
+  - Caddy
+  - Lifecycle
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    CADDY_API_KEY: CADDY_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: caddy-lifecycle
+    baseUri: http://localhost:2019
+    description: Caddy Admin API — Lifecycle business capability. Self-contained, no shared references.
+    resources:
+    - name: load
+      path: /load
+      operations:
+      - name: loadconfig
+        method: POST
+        description: Set or replace the active configuration
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: stop
+      path: /stop
+      operations:
+      - name: stopserver
+        method: POST
+        description: Gracefully shut down the server
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+  exposes:
+  - type: rest
+    namespace: caddy-lifecycle-rest
+    port: 8080
+    description: REST adapter for Caddy Admin API — Lifecycle. One Spectral-compliant resource per consumed operation, prefixed
+      with /v1.
+    resources:
+    - path: /v1/load
+      name: load
+      description: REST surface for load.
+      operations:
+      - method: POST
+        name: loadconfig
+        description: Set or replace the active configuration
+        call: caddy-lifecycle.loadconfig
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/stop
+      name: stop
+      description: REST surface for stop.
+      operations:
+      - method: POST
+        name: stopserver
+        description: Gracefully shut down the server
+        call: caddy-lifecycle.stopserver
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: caddy-lifecycle-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Caddy Admin API — Lifecycle. One tool per consumed operation, routed inline through this
+      capability's consumes block.
+    tools:
+    - name: set-replace-active-configuration
+      description: Set or replace the active configuration
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: caddy-lifecycle.loadconfig
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: gracefully-shut-down-server
+      description: Gracefully shut down the server
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: caddy-lifecycle.stopserver
+      outputParameters:
+      - type: object
+        mapping: $.
