@@ -1,12 +1,12 @@
 # Caddy (caddy)
+
 Caddy is a modern, extensible, open-source web server and reverse proxy written in Go that provides automatic HTTPS via Let's Encrypt, a dynamic JSON-based admin API, a human-friendly Caddyfile configuration format, and a modular architecture with a rich ecosystem of plugins for authentication, observability, and custom behavior.
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/caddy/refs/heads/main/apis.yml)
+**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/caddy/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/caddy/refs/heads/main/apis.yml)
 
 ## Scope
 
 - **Type:** Index
-- **x-type:** opensource
 - **Position:** Consumer
 - **Access:** Open Source
 
@@ -19,12 +19,26 @@ Caddy is a modern, extensible, open-source web server and reverse proxy written 
 - TLS
 - Web Server
 
+## Timestamps
+
+- **Created:** 2026-03-27
+- **Modified:** 2026-05-19
+
 ## APIs
 
 ### Caddy Web Server
-Open-source HTTP/2 and HTTP/3 web server and reverse proxy with automatic TLS via Let's Encrypt and ZeroSSL.
 
-**Human URL:** [https://caddyserver.com/](https://caddyserver.com/)
+Caddy is an open-source HTTP/2 and HTTP/3 web server and reverse proxy that obtains TLS certificates automatically via Let's Encrypt and ZeroSSL. Configured via a native JSON config, a human-friendly Caddyfile, or dynamically via the admin API. Built on a modular architecture that supports custom modules for virtually any HTTP behavior.
+
+- **Human URL:** [https://caddyserver.com/](https://caddyserver.com/)
+
+#### Tags
+
+- Automatic HTTPS
+- Go
+- Reverse Proxy
+- TLS
+- Web Server
 
 #### Properties
 
@@ -32,30 +46,40 @@ Open-source HTTP/2 and HTTP/3 web server and reverse proxy with automatic TLS vi
 - [Getting Started](https://caddyserver.com/docs/getting-started)
 - [GitHub Repository](https://github.com/caddyserver/caddy)
 - [Download](https://caddyserver.com/download)
+- [OpenAPI](openapi/caddy-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
+- [Postman Collection](collections/caddy.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/caddy.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
 
 ### Caddy Admin API
-RESTful administration API on localhost:2019 for runtime configuration without restarts.
 
-**Human URL:** [https://caddyserver.com/docs/api](https://caddyserver.com/docs/api)
+Caddy exposes a RESTful administration API on localhost:2019 by default for dynamically loading and modifying server configuration at runtime without restarts. Endpoints support loading full JSON configs, traversing and mutating specific config paths, adapting Caddyfile to JSON, and querying PKI and reverse proxy state.
+
+- **Human URL:** [https://caddyserver.com/docs/api](https://caddyserver.com/docs/api)
+- **Base URL:** `http://localhost:2019`
+
+#### Tags
+
+- Admin API
+- Configuration
+- REST
 
 #### Properties
 
 - [Documentation](https://caddyserver.com/docs/api)
-- [JSON Config Structure](https://caddyserver.com/docs/json/)
-- [Modules Reference](https://caddyserver.com/docs/modules/)
+- [J S O N  Config  Structure](https://caddyserver.com/docs/json/)
+- [Modules  Reference](https://caddyserver.com/docs/modules/)
+- [A P I  Tutorial](https://caddyserver.com/docs/api-tutorial)
+- [Postman Collection](collections/caddy.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/caddy.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
 
 ## Common Properties
 
 - [Website](https://caddyserver.com/)
 - [Documentation](https://caddyserver.com/docs/)
 - [GitHub Organization](https://github.com/caddyserver)
-- [Community Forum](https://caddy.community/)
+- [Community  Forum](https://caddy.community/)
 - [Download](https://caddyserver.com/download)
-
-## Timestamps
-
-- **Created:** 2026-03-27
-- **Modified:** 2026-04-23
+- [Sponsors](https://github.com/sponsors/mholt)
 
 ## Maintainers
 
