@@ -1,0 +1,241 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Caddy Admin API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Lifecycle",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Set or replace the active configuration",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:2019/load",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Set or replace the active configuration"
+        },
+        {
+          "info": {
+            "name": "Gracefully shut down the server",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:2019/stop"
+          },
+          "docs": "Gracefully shut down the server"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Configuration",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Export current configuration at a named path",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:2019/config/:path",
+            "params": [
+              {
+                "name": "path",
+                "value": "",
+                "type": "path",
+                "description": "Configuration path traversal expression."
+              }
+            ]
+          },
+          "docs": "Export current configuration at a named path"
+        },
+        {
+          "info": {
+            "name": "Create or append to configuration at a named path",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:2019/config/:path",
+            "params": [
+              {
+                "name": "path",
+                "value": "",
+                "type": "path",
+                "description": "Configuration path traversal expression."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create or append to configuration at a named path"
+        },
+        {
+          "info": {
+            "name": "Create new objects or insert into arrays at a named path",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "http://localhost:2019/config/:path",
+            "params": [
+              {
+                "name": "path",
+                "value": "",
+                "type": "path",
+                "description": "Configuration path traversal expression."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create new objects or insert into arrays at a named path"
+        },
+        {
+          "info": {
+            "name": "Replace existing configuration values at a named path",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "http://localhost:2019/config/:path",
+            "params": [
+              {
+                "name": "path",
+                "value": "",
+                "type": "path",
+                "description": "Configuration path traversal expression."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Replace existing configuration values at a named path"
+        },
+        {
+          "info": {
+            "name": "Remove configuration at a named path",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "http://localhost:2019/config/:path",
+            "params": [
+              {
+                "name": "path",
+                "value": "",
+                "type": "path",
+                "description": "Configuration path traversal expression."
+              }
+            ]
+          },
+          "docs": "Remove configuration at a named path"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Adapt",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Convert a Caddyfile or other config format to JSON without loading",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:2019/adapt"
+          },
+          "docs": "Convert a Caddyfile or other config format to JSON without loading"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "PKI",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Returns PKI CA information",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:2019/pki/ca/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Returns PKI CA information"
+        },
+        {
+          "info": {
+            "name": "Returns the CA certificate chain",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:2019/pki/ca/:id/certificates",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Returns the CA certificate chain"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Reverse Proxy",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Show reverse proxy upstream status",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:2019/reverse_proxy/upstreams"
+          },
+          "docs": "Show reverse proxy upstream status"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
