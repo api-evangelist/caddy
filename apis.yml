@@ -97,6 +97,8 @@ apis:
       - Integration with service discovery
       - Observability of upstream health
 common:
+  - type: AgenticAccess
+    url: agentic-access/caddy-agentic-access.yml
   - type: DomainSecurity
     url: security/caddy-domain-security.yml
   - type: Website
