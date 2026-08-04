@@ -1,0 +1,22 @@
+{
+  "provider": "caddy",
+  "sources": [
+    "caddy-adapt-api-openapi.yml",
+    "caddy-configuration-api-openapi.yml",
+    "caddy-lifecycle-api-openapi.yml",
+    "caddy-pki-api-openapi.yml",
+    "caddy-reverse-proxy-api-openapi.yml"
+  ],
+  "outputs": [
+    "caddy-adapt-api-openapi.yml",
+    "caddy-configuration-api-openapi.yml",
+    "caddy-lifecycle-api-openapi.yml",
+    "caddy-pki-api-openapi.yml",
+    "caddy-reverse-proxy-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
