@@ -160,6 +160,17 @@ apis:
   - type: Download
     url: https://caddyserver.com/download
 common:
+  - type: IssueTracker
+    url: https://github.com/caddyserver/caddy/issues
+  - type: Releases
+    url: https://github.com/caddyserver/caddy/releases
+  - type: SecurityPolicy
+    url: https://github.com/caddyserver/caddy/blob/master/.github/SECURITY.md
+  - type: ContributionGuide
+    url: https://github.com/caddyserver/caddy/blob/master/.github/CONTRIBUTING.md
+  - type: License
+    name: Apache-2.0
+    url: https://github.com/caddyserver/caddy/blob/master/LICENSE
   - type: AgenticAccess
     url: agentic-access/caddy-agentic-access.yml
   - type: DomainSecurity
