@@ -1,0 +1,125 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Caddy Admin Adapt Configuration API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Configuration",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Export current configuration at a named path",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:2019/config/:path",
+            "params": [
+              {
+                "name": "path",
+                "value": "",
+                "type": "path",
+                "description": "Configuration path traversal expression."
+              }
+            ]
+          },
+          "docs": "Export current configuration at a named path"
+        },
+        {
+          "info": {
+            "name": "Create or append to configuration at a named path",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:2019/config/:path",
+            "params": [
+              {
+                "name": "path",
+                "value": "",
+                "type": "path",
+                "description": "Configuration path traversal expression."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create or append to configuration at a named path"
+        },
+        {
+          "info": {
+            "name": "Create new objects or insert into arrays at a named path",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "http://localhost:2019/config/:path",
+            "params": [
+              {
+                "name": "path",
+                "value": "",
+                "type": "path",
+                "description": "Configuration path traversal expression."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create new objects or insert into arrays at a named path"
+        },
+        {
+          "info": {
+            "name": "Replace existing configuration values at a named path",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "http://localhost:2019/config/:path",
+            "params": [
+              {
+                "name": "path",
+                "value": "",
+                "type": "path",
+                "description": "Configuration path traversal expression."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Replace existing configuration values at a named path"
+        },
+        {
+          "info": {
+            "name": "Remove configuration at a named path",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "http://localhost:2019/config/:path",
+            "params": [
+              {
+                "name": "path",
+                "value": "",
+                "type": "path",
+                "description": "Configuration path traversal expression."
+              }
+            ]
+          },
+          "docs": "Remove configuration at a named path"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

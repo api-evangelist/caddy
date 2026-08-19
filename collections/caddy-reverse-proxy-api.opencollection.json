@@ -1,0 +1,29 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Caddy Admin Adapt Reverse Proxy API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Reverse Proxy",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Show reverse proxy upstream status",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:2019/reverse_proxy/upstreams"
+          },
+          "docs": "Show reverse proxy upstream status"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

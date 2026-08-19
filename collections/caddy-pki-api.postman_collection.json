@@ -1,0 +1,208 @@
+{
+  "item": [
+    {
+      "id": "d9db6004-539f-4eac-860b-6c72cd61147b",
+      "name": "PKI",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "de2c0662-56fc-4363-84f5-67f5d8bfb18d",
+          "name": "Returns PKI CA information",
+          "request": {
+            "name": "Returns PKI CA information",
+            "description": {},
+            "url": {
+              "path": [
+                "pki",
+                "ca",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "4752386b-e8a5-4329-8423-21cd45a4cc58",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "pki",
+                    "ca",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"key_0\": false,\n  \"key_1\": 9891\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "450658a5-3218-47ea-9707-97b78bb26896",
+          "name": "Returns the CA certificate chain",
+          "request": {
+            "name": "Returns the CA certificate chain",
+            "description": {},
+            "url": {
+              "path": [
+                "pki",
+                "ca",
+                ":id",
+                "certificates"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/x-pem-file"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a3592257-a61b-4a27-9e48-643f31a95398",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "pki",
+                    "ca",
+                    ":id",
+                    "certificates"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/x-pem-file"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/x-pem-file"
+                }
+              ],
+              "body": "string",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "http://localhost:2019",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "320a470a-209f-42ac-96cf-de0c830959ce",
+    "name": "Caddy Admin Adapt PKI API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Minimal OpenAPI 3.1 description of the Caddy web server admin API. By default the admin endpoint is bound to localhost:2019 and is used to inspect and dynamically modify the running configuration without restarts.",
+      "type": "text/plain"
+    }
+  }
+}

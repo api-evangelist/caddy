@@ -1,0 +1,44 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Caddy Admin Adapt Lifecycle API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Lifecycle",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Set or replace the active configuration",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:2019/load",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Set or replace the active configuration"
+        },
+        {
+          "info": {
+            "name": "Gracefully shut down the server",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:2019/stop"
+          },
+          "docs": "Gracefully shut down the server"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

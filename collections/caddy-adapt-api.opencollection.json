@@ -1,0 +1,29 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Caddy Admin Adapt API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Adapt",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Convert a Caddyfile or other config format to JSON without loading",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:2019/adapt"
+          },
+          "docs": "Convert a Caddyfile or other config format to JSON without loading"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

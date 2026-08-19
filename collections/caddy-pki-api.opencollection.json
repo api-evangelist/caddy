@@ -1,0 +1,54 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Caddy Admin Adapt PKI API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "PKI",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Returns PKI CA information",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:2019/pki/ca/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Returns PKI CA information"
+        },
+        {
+          "info": {
+            "name": "Returns the CA certificate chain",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:2019/pki/ca/:id/certificates",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Returns the CA certificate chain"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
