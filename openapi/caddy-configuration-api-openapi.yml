@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Caddy Admin Adapt Configuration API
+  title: Caddy Admin Configuration API
   version: '1.0'
   description: Minimal OpenAPI 3.1 description of the Caddy web server admin API. By default the admin endpoint is bound to localhost:2019 and is used to inspect and dynamically modify the running configuration without restarts.
   x-generated-from: https://caddyserver.com/docs/api
@@ -77,6 +77,10 @@ paths:
         '200':
           description: OK
 components:
+  schemas:
+    Config:
+      type: object
+      additionalProperties: true
   parameters:
     PathParam:
       name: path
@@ -85,7 +89,3 @@ components:
       description: Configuration path traversal expression.
       schema:
         type: string
-  schemas:
-    Config:
-      type: object
-      additionalProperties: true

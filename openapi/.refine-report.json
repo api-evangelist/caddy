@@ -1,11 +1,7 @@
 {
   "provider": "caddy",
   "sources": [
-    "caddy-adapt-api-openapi.yml",
-    "caddy-configuration-api-openapi.yml",
-    "caddy-lifecycle-api-openapi.yml",
-    "caddy-pki-api-openapi.yml",
-    "caddy-reverse-proxy-api-openapi.yml"
+    "_ae-authored/caddy-openapi.yml"
   ],
   "outputs": [
     "caddy-adapt-api-openapi.yml",
@@ -17,6 +13,16 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (0 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "caddy-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "caddy-adapt-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "caddy-configuration-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "caddy-lifecycle-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "caddy-pki-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "caddy-reverse-proxy-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
