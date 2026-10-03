@@ -42,10 +42,6 @@ paths:
               schema:
                 type: string
 components:
-  schemas:
-    Config:
-      type: object
-      additionalProperties: true
   parameters:
     IdParam:
       name: id
@@ -53,3 +49,7 @@ components:
       required: true
       schema:
         type: string
+  schemas:
+    Config:
+      type: object
+      additionalProperties: true
