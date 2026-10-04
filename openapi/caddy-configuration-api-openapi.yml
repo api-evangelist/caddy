@@ -77,6 +77,10 @@ paths:
         '200':
           description: OK
 components:
+  schemas:
+    Config:
+      type: object
+      additionalProperties: true
   parameters:
     PathParam:
       name: path
@@ -85,7 +89,3 @@ components:
       description: Configuration path traversal expression.
       schema:
         type: string
-  schemas:
-    Config:
-      type: object
-      additionalProperties: true
