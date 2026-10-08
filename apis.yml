@@ -173,6 +173,12 @@ apis:
   - type: Download
     url: https://caddyserver.com/download
 common:
+  - type: Plans
+    url: plans/caddy-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/caddy-rate-limits.yml
+  - type: FinOps
+    url: finops/caddy-finops.yml
   - type: IssueTracker
     url: https://github.com/caddyserver/caddy/issues
   - type: Releases
